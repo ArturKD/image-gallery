@@ -1,0 +1,253 @@
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+}
+
+header {
+    border-bottom: 1px solid #030303;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 50px;
+    padding: 0 20px;
+}
+.icon{
+    width: 10%;
+    height: fit-content;
+}
+.icon svg:hover {
+    cursor: pointer;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 1rem;
+}
+
+.search {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 40%;
+    height: 30px;
+}
+
+input[type="search"] {
+    border-radius: 25px;
+    transition: all 0.30s ease-in-out;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+}
+
+input[type="search"]::placeholder {
+    color: rgb(159, 158, 158);
+}
+.input {
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+button[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s ease;
+
+}
+
+button[type="submit"]:hover {
+    opacity: 1;
+}
+
+.search input:focus {
+    box-shadow: 0 0 5px #00ffce;
+    border: 1px solid #00ffce;
+}
+.search button:hover {
+    opacity: 1;
+}
+
+.container-section{
+
+}
+.container-image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 800px;
+    min-width: 320px;
+}
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img {
+    display: none;
+    max-width: 1440px;
+    height: fit-content;
+}
+.thumb {
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 1;
+    background-repeat: no-repeat;
+}
+.thumb:hover {
+    opacity: 0.7;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+
+}#caption {
+     margin: auto;
+     display: block;
+     width: 80%;
+     max-width: 700px;
+     text-align: center;
+     color: #ccc;
+     padding: 10px 0;
+     height: 150px;
+    font-size: 2rem;
+ }
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.origin {
+}
+.footer {
+    padding: 0 40px 0 40px;
+    background-color: #00ffce;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+@media(max-width:1280px) {
+    .icon{
+        width: 30%;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:1280px) {
+    .icon{
+        width: 20%;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+
+    .main {
+        width: 95%;
+    }
+    .icon{
+        width: 50%;
+    }
+    .header {
+        flex-direction: column;
+        align-content: center;
+        padding-bottom: 20px;
+    }
+    .title {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:480px) {
+    .icon{
+        width: 50%;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .search {
+        width: 80%;
+        margin: auto;
+    }
+
+    .search input {
+        font-size: .7rem;
+    }
+}
